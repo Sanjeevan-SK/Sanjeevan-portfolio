@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S K Sanjeevan — Software Engineer & AI Enthusiast</title>
+  <meta name="description"
+    content="Portfolio of S K Sanjeevan — Software Engineer, AI Engineer, and Full Stack Developer focused on building scalable, AI-driven solutions." />
+  <meta name="keywords"
+    content="S K Sanjeevan, Software Engineer, AI Engineer, Data Engineer, Full Stack Developer, Portfolio" />
+  <meta name="author" content="S K Sanjeevan" />
+  <meta property="og:title" content="S K Sanjeevan — Engineering Portfolio" />
+  <meta property="og:description"
+    content="Software & AI Engineer creating high-performance, data-driven digital experiences." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon emoji -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+  <!-- ======================================================
+     LOADER
+================================================== -->
+  <div id="loader" role="status" aria-label="Loading">
+    <span id="loader-greeting" class="loader-greeting">Hello!</span>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <span id="loader-sub" class="loader-sub">English</span>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ======================================================
+     FLOATING BOTTOM NAV
+================================================== -->
+  <nav id="floating-nav" aria-label="Site navigation">
+    <a href="#hero" class="nav-item active" aria-label="Home">
+      <svg viewBox="0 0 24 24">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+      Home
+    </a>
+    <a href="#about" class="nav-item" aria-label="About">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+      </svg>
+      About
+    </a>
+    <a href="#skills" class="nav-item" aria-label="Skills">
+      <svg viewBox="0 0 24 24">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+      Skills
+    </a>
+    <a href="#projects" class="nav-item" aria-label="Projects">
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
+      </svg>
+      Projects
+    </a>
+    <a href="#experience" class="nav-item" aria-label="Experience">
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      </svg>
+      Experience
+    </a>
+    <a href="#contact" class="nav-item" aria-label="Contact">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <polyline points="22,6 12,13 2,6" />
+      </svg>
+      Contact
+    </a>
+  </nav>
+
+  <!-- ======================================================
+     MAIN CONTENT
+================================================== -->
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section id="hero">
+      <!-- Glow blobs -->
+      <div class="hero-bg-glow g1" aria-hidden="true"></div>
+      <div class="hero-bg-glow g2" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+
+
+          <p class="hero-greeting">Hi there, I'm</p>
+
+          <h1 class="hero-name">
+            <span class="gradient-text">S K Sanjeevan</span>
+          </h1>
+
+          <div class="hero-role-wrap">
+            <span id="typed-text">Software Engineer</span><span class="typed-cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            Data Science-focused undergraduate with a strong foundation in Machine Learning and software development.
+            Experienced in building AI-driven and data-oriented applications with strong problem-solving and analytical
+            skills.
+            Passionate about developing scalable solutions and continuously learning emerging technologies.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary" id="btn-view-work">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              View My Work
+            </a>
+            <a href="S%20K%20Sanjeevan%20Resume.pdf" download class="btn btn-outline" id="btn-resume">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+              Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline" id="btn-contact">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Get In Touch
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Avatar -->
+        <div class="hero-avatar-wrap" aria-hidden="true">
+          <div class="orbit-icon">🛠️</div>
+          <div class="orbit-icon">⚡</div>
+          <div class="orbit-icon">🎨</div>
+          <div class="orbit-icon">🤖</div>
+          <div class="hero-avatar-ring">
+            <img src="assets/avatar.png" alt="S K Sanjeevan avatar" class="hero-avatar-img" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT / BENTO ====== -->
+    <section id="about">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">The Person <span class="gradient-text">Behind the Code</span></h2>
+        </div>
+
+        <div class="bento-grid reveal-stagger">
+
+          <!-- Bio Card (large) -->
+          <div class="bento-card col-12">
+            <div class="stripe stripe-blue"></div>
+            <div class="about-me-card">
+              <div class="about-emoji-row" aria-hidden="true">💻 🚀 🎯</div>
+              <span class="bc-label">Who I Am</span>
+              <h3 class="bc-title">Developer. Creator. Problem Solver.</h3>
+              <p class="bc-desc">
+                I'm S K Sanjeevan, a 3rd-year B.Tech student in Artificial Intelligence and Data Science at Sri Sairam
+                Engineering College.
+                I thrive at the intersection of Machine Learning and Software Development, dedicated to building
+                scalable AI-driven solutions.
+              </p>
+              <p class="bc-desc">
+                With a background in full-stack development and hands-on experience in fine-tuning large language
+                models,
+                I am passionate about leveraging emerging technologies to solve complex problems and create meaningful
+                digital experiences.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- Roles Grid -->
+          <div class="bento-card col-6">
+            <div class="stripe stripe-blue"></div>
+            <div class="role-card-inner">
+              <span class="bc-label">Specialization</span>
+              <h3 class="bc-title">Software Engineer</h3>
+              <p class="bc-desc">Focusing on robust architecture, clean code, and scalable backend systems using Python,
+                C, and SQL.</p>
+              <div class="about-emoji-row" style="margin-top:10px; font-size: 1.2rem;">💻 ⚙️ 🏛️</div>
+            </div>
+          </div>
+
+          <div class="bento-card col-6">
+            <div class="stripe stripe-purple"></div>
+            <div class="role-card-inner">
+              <span class="bc-label">Specialization</span>
+              <h3 class="bc-title">AI Engineer</h3>
+              <p class="bc-desc">Specializing in LLMs, NLP, and Machine Learning to build intelligent, autonomous
+                applications.</p>
+              <div class="about-emoji-row" style="margin-top:10px; font-size: 1.2rem;">🤖 🧠 📈</div>
+            </div>
+          </div>
+
+          <div class="bento-card col-6">
+            <div class="stripe stripe-teal"></div>
+            <div class="role-card-inner">
+              <span class="bc-label">Specialization</span>
+              <h3 class="bc-title">Data Engineer</h3>
+              <p class="bc-desc">Architecting efficient data pipelines and managing large-scale databases with MySQL and
+                MongoDB.</p>
+              <div class="about-emoji-row" style="margin-top:10px; font-size: 1.2rem;">📊 🗄️ ⛓️</div>
+            </div>
+          </div>
+
+          <div class="bento-card col-6">
+            <div class="stripe stripe-pink"></div>
+            <div class="role-card-inner">
+              <span class="bc-label">Specialization</span>
+              <h3 class="bc-title">Full Stack Developer</h3>
+              <p class="bc-desc">Crafting seamless end-to-end user experiences with modern frontend tools and powerful
+                backends.</p>
+              <div class="about-emoji-row" style="margin-top:10px; font-size: 1.2rem;">🌐 🚀 🎨</div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skills">
+      <div class="container">
+        <div class="skills-header reveal">
+          <div>
+            <span class="section-label">Tech Stack</span>
+            <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+          </div>
+          <p class="section-desc">Tools and technologies I use to craft high-quality software.</p>
+        </div>
+
+        <div class="skills-categories">
+
+          <!-- Languages -->
+          <div class="reveal">
+            <p class="skill-category-title">Languages</p>
+            <div class="skills-pills reveal-stagger">
+              <span class="skill-pill"><span class="skill-icon">🔵</span> C</span>
+              <span class="skill-pill"><span class="skill-icon">🐍</span> Python</span>
+              <span class="skill-pill"><span class="skill-icon">🐘</span> SQL</span>
+            </div>
+          </div>
+
+          <!-- Frontend Tools -->
+          <div class="reveal">
+            <p class="skill-category-title">Frontend Tools</p>
+            <div class="skills-pills reveal-stagger">
+              <span class="skill-pill"><span class="skill-icon">🌐</span> HTML</span>
+              <span class="skill-pill"><span class="skill-icon">🎨</span> CSS</span>
+              <span class="skill-pill"><span class="skill-icon">📜</span> JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="reveal">
+            <p class="skill-category-title">Databases</p>
+            <div class="skills-pills reveal-stagger">
+              <span class="skill-pill"><span class="skill-icon">🐬</span> MySQL</span>
+              <span class="skill-pill"><span class="skill-icon">🍃</span> MongoDB</span>
+            </div>
+          </div>
+
+          <!-- Developer Tools -->
+          <div class="reveal">
+            <p class="skill-category-title">Developer Tools</p>
+            <div class="skills-pills reveal-stagger">
+              <span class="skill-pill"><span class="skill-icon">🔧</span> Git</span>
+              <span class="skill-pill"><span class="skill-icon">🐙</span> GitHub</span>
+              <span class="skill-pill"><span class="skill-icon">🖱️</span> Cursor</span>
+              <span class="skill-pill"><span class="skill-icon">🛸</span> Antigravity</span>
+            </div>
+          </div>
+
+          <!-- Analytics & Automation -->
+          <div class="reveal">
+            <p class="skill-category-title">Analytics & Automation</p>
+            <div class="skills-pills reveal-stagger">
+              <span class="skill-pill"><span class="skill-icon">📊</span> Power BI</span>
+              <span class="skill-pill"><span class="skill-icon">📉</span> Excel</span>
+              <span class="skill-pill"><span class="skill-icon">🤖</span> Ui Path</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects">
+      <div class="container">
+        <div class="projects-header reveal">
+          <div>
+            <span class="section-label">My Work</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          </div>
+          <a href="https://github.com/sksanjeevan" target="_blank" rel="noopener" class="btn btn-ghost"
+            id="btn-github-all">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            All on GitHub
+          </a>
+        </div>
+
+        <div class="projects-grid reveal-stagger">
+
+          <!-- Project 1: BrainyEduBot -->
+          <article class="project-card">
+            <div class="project-img-wrap">
+              <div class="project-img-bg" style="background: linear-gradient(135deg, #0d1117, #5865F2);">
+                <span style="font-size:4rem;">🤖</span>
+              </div>
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Telegram API</span>
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">PDF Processing</span>
+              </div>
+              <h3 class="project-name">BrainyEduBot – AI Study Companion</h3>
+              <p class="project-desc">An AI-powered Telegram bot that summarizes text and PDF documents into concise
+                study notes. Features automated PDF text extraction and real-time AI response generation for academic
+                assistance.</p>
+              <div class="project-links">
+                <a href="https://github.com/Sanjeevan-SK" class="project-link-btn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Stock Trading SaaS -->
+          <article class="project-card">
+            <div class="project-img-wrap">
+              <div class="project-img-bg" style="background: linear-gradient(135deg, #0d1117, #10B981);">
+                <span style="font-size:4rem;">📈</span>
+              </div>
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">API Integration</span>
+                <span class="project-tag">Caching</span>
+              </div>
+              <h3 class="project-name">Stock Trading & Portfolio Management</h3>
+              <p class="project-desc">A SaaS platform to track real-time stock prices and manage virtual portfolios.
+                Built with backend APIs featuring simple caching for performance and integrated TradingView charts for
+                visualization.</p>
+              <div class="project-links">
+                <a href="https://github.com/Sanjeevan-SK/stock-trainer-pro-application.git" class="project-link-btn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section id="experience">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Journey</span>
+          <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+          <p class="section-desc" style="margin-top:8px;">My professional journey and academic milestones.</p>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <div class="timeline-role">Data Science & Machine Learning Intern</div>
+                  <div class="timeline-company">Virtual Tech Services</div>
+                </div>
+                <div class="timeline-date">Jan 2024 – Present</div>
+              </div>
+              <p class="timeline-desc">
+                Applied 4-bit NF4 Quantization and QLoRA to fine-tune a Llama-3.1 (8B) model on 2,000+ legal samples,
+                reducing memory usage by 65% while maintaining high reasoning accuracy.
+                Achieved 2x faster training speeds with Unsloth and deployed a Gradio interface on an NVIDIA T4 GPU.
+              </p>
+              <div class="timeline-badges">
+                <span class="tl-badge">Llama-3.1</span>
+                <span class="tl-badge">QLoRA</span>
+                <span class="tl-badge">Unsloth</span>
+                <span class="tl-badge">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <div class="timeline-role">Web Development Intern</div>
+                  <div class="timeline-company">Calanjiyam Consultancies and Technologies</div>
+                </div>
+                <div class="timeline-date">Jun 2023 – Dec 2023</div>
+              </div>
+              <p class="timeline-desc">
+                Engineered a role-based turf booking platform using MySQL, HTML, CSS, and JavaScript, incorporating
+                structured database schemas to efficiently manage users, bookings, and slots.
+                Designed and implemented authentication workflows and a multi-state booking status system.
+              </p>
+              <div class="timeline-badges">
+                <span class="tl-badge">MySQL</span>
+                <span class="tl-badge">HTML/CSS</span>
+                <span class="tl-badge">JavaScript</span>
+                <span class="tl-badge">Auth</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <div class="timeline-role">B.Tech in Artificial Intelligence and Data Science</div>
+                  <div class="timeline-company">Sri Sairam Engineering College</div>
+                </div>
+                <div class="timeline-date">2023 – 2027</div>
+              </div>
+              <p class="timeline-desc">
+                Currently in 3rd year. Focusing on Machine Learning, Data Structures, and Software Engineering. Active
+                participant in symposiums and hackathons.
+              </p>
+              <div class="timeline-badges">
+                <span class="tl-badge">CGPA: 8.40</span>
+                <span class="tl-badge">AI & DS</span>
+                <span class="tl-badge">DSA</span>
+                <span class="tl-badge">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ACHIEVEMENTS ====== -->
+    <section id="achievements">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Milestones</span>
+          <h2 class="section-title">Achievements & <span class="gradient-text">Certifications</span></h2>
+        </div>
+
+        <div class="achievements-grid reveal-stagger">
+
+          <div class="achievement-card">
+            <div class="achievement-icon">🏆</div>
+            <div class="achievement-info">
+              <div class="achievement-title">build2together (b2g) Hackathon</div>
+              <div class="achievement-subtitle">85th Place · Over 500 Teams</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">🎪</div>
+            <div class="achievement-info">
+              <div class="achievement-title">AIRO 5.0 Symposium Organizer</div>
+              <div class="achievement-subtitle">Webverse Event · 100+ Participants</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">💡</div>
+            <div class="achievement-info">
+              <div class="achievement-title">InnovaTN'25 - ATL Innovation</div>
+              <div class="achievement-subtitle">Volunteer · 450+ Young Innovators</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">🥇</div>
+            <div class="achievement-info">
+              <div class="achievement-title">3x Gold Medalist - Kho Kho</div>
+              <div class="achievement-subtitle">College Sports Achievements</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">✍️</div>
+            <div class="achievement-info">
+              <div class="achievement-title">BIS Essay Writing - 2nd Place</div>
+              <div class="achievement-subtitle">Bureau of Indian Standards · 50+ Participants</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">📜</div>
+            <div class="achievement-info">
+              <div class="achievement-title">NPTEL - Machine Learning</div>
+              <div class="achievement-subtitle">Introduction to Machine Learning Certificate</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">📊</div>
+            <div class="achievement-info">
+              <div class="achievement-title">Forage - Data Analytics</div>
+              <div class="achievement-subtitle">Job Simulation Certificate</div>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">🐍</div>
+            <div class="achievement-info">
+              <div class="achievement-title">NPTEL - Python for DS</div>
+              <div class="achievement-subtitle">Python for Data Science Certificate</div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="contact-inner reveal">
+        <div class="contact-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          Get in touch
+        </div>
+
+        <h2 class="contact-title">
+          Let's Build <span class="gradient-text">Something Amazing</span>
+        </h2>
+
+        <p class="contact-sub">
+          Whether you have a project in mind, an opportunity to share, or just want
+          to say hello — my inbox is always open. Let's connect!
+        </p>
+
+        <form id="contact-form" class="contact-form reveal">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="8398ae9b-c011-4a24-84af-d924f9b76a11">
+          <input type="hidden" name="subject" value="New Message from Portfolio">
+          <input type="hidden" name="from_name" value="Portfolio Contact Form">
+
+          <div class="form-title">Send a Message</div>
+
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Full Name" required class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required class="form-control">
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required class="form-control" rows="6"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+
+          <div id="form-status" class="form-status"></div>
+        </form>
+
+
+        <div class="social-links" role="list">
+          <a href="https://github.com/Sanjeevan-SK" target="_blank" rel="noopener" class="social-link" role="listitem"
+            aria-label="GitHub" id="social-github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/sanjeevansks" target="_blank" rel="noopener" class="social-link"
+            role="listitem" aria-label="LinkedIn" id="social-linkedin-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://leetcode.com/u/Sanjeevan_SK/" target="_blank" rel="noopener" class="social-link"
+            role="listitem" aria-label="LeetCode" id="social-leetcode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+     TOAST
+================================================== -->
+  <div id="toast" role="status" aria-live="polite" style="display:none;">
+    <span class="toast-icon">👋</span>
+    <span>Welcome! Let's build something great together.</span>
+  </div>
+
+  <!-- ======================================================
+     FOOTER
+================================================== -->
+  <footer>
+    <p>
+      Designed & Built by <strong>S K Sanjeevan</strong>
+      with <span class="footer-heart" aria-label="love">♥</span>
+      · <span id="footer-year"></span>
+    </p>
+    <p style="margin-top: 10px; font-size: 0.75rem; opacity: 0.8;">
+      © 2026 S K SANJEEVAN All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/particles.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
